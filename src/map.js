@@ -124,11 +124,11 @@ var legends = {
     DEN_POB: {
         title: "Densidad residencial",
         subtitle: "Habitantes por km2",
-        elem1: '<div><span  style= "color:#809bba">▉</span>0 - 4</div>',
-        elem2: '<div><span  style= "color:#4575b5">▉</span>5 - 10</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>11 - 17</div>',
-        elem4: '<div><span  style= "color:#f59869">▉</span>17 - 18</div>',
-        elem5: '<div><span  style= "color:#d62f27">▉</span>19 - 26</div>',
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 4</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>5 - 10</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>11 - 17</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>17 - 26</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>27 - 59</div>',
         elem6: '',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -136,11 +136,11 @@ var legends = {
     VIV_ADE: {
         title: "Vivienda adecuada",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d62f27">▉</span>0 - 14</div>',
-        elem2: '<div><span  style= "color:#f59869">▉</span>15 - 38</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>39 - 60</div>',
-        elem4: '<div><span  style= "color:#4575b5">▉</span>61 - 79</div>',
-        elem5: '<div><span  style= "color:#809bba">▉</span>80 - 100</div>',
+        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 14</div>',
+        elem2: '<div><span  style= "color:#fdae61">▉</span>15 - 38</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>39 - 60</div>',
+        elem4: '<div><span  style= "color:#a6d96a">▉</span>61 - 79</div>',
+        elem5: '<div><span  style= "color:#1a9641">▉</span>80 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -148,11 +148,11 @@ var legends = {
     AGUA: {
         title: "Acceso a agua mejorada",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d62f27">▉</span>0 - 16</div>',
-        elem2: '<div><span  style= "color:#f59869">▉</span>17 - 43</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>44 - 67</div>',
-        elem4: '<div><span  style= "color:#4575b5">▉</span>68 - 84</div>',
-        elem5: '<div><span  style= "color:#809bba">▉</span>85 - 100</div>',
+        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 16</div>',
+        elem2: '<div><span  style= "color:#fdae61">▉</span>17 - 43</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>44 - 67</div>',
+        elem4: '<div><span  style= "color:#a6d96a">▉</span>68 - 84</div>',
+        elem5: '<div><span  style= "color:#1a9641">▉</span>85 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -160,11 +160,11 @@ var legends = {
     SAN: {
         title: "Acceso a saneamiento",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d62f27">▉</span>0 - 20</div>',
-        elem2: '<div><span  style= "color:#f59869">▉</span>21 - 44</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>45 - 67</div>',
-        elem4: '<div><span  style= "color:#4575b5">▉</span>68 - 84</div>',
-        elem5: '<div><span  style= "color:#809bba">▉</span>85 - 100</div>',
+        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 20</div>',
+        elem2: '<div><span  style= "color:#fdae61">▉</span>21 - 44</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>45 - 67</div>',
+        elem4: '<div><span  style= "color:#a6d96a">▉</span>68 - 84</div>',
+        elem5: '<div><span  style= "color:#1a9641">▉</span>85 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -172,11 +172,11 @@ var legends = {
     ELEC: {
         title: "Acceso a electricidad",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d62f27">▉</span>0 - 24</div>',
-        elem2: '<div><span  style= "color:#f59869">▉</span>25 - 51</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>52 - 71</div>',
-        elem4: '<div><span  style= "color:#4575b5">▉</span>72 - 86</div>',
-        elem5: '<div><span  style= "color:#809bba">▉</span>87 - 100</div>',
+        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 24</div>',
+        elem2: '<div><span  style= "color:#fdae61">▉</span>25 - 51</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>52 - 71</div>',
+        elem4: '<div><span  style= "color:#a6d96a">▉</span>72 - 86</div>',
+        elem5: '<div><span  style= "color:#1a9641">▉</span>87 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -184,11 +184,11 @@ var legends = {
     INTER: {
         title: "Acceso a internet",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#809bba">▉</span>0 - 14</div>',
-        elem2: '<div><span  style= "color:#4575b5">▉</span>15 - 38</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>39 - 60</div>',
-        elem4: '<div><span  style= "color:#f59869">▉</span>61 - 79</div>',
-        elem5: '<div><span  style= "color:#d62f27">▉</span>80 - 100</div>',
+        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 14</div>',
+        elem2: '<div><span  style= "color:#fdae61">▉</span>15 - 38</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>39 - 60</div>',
+        elem4: '<div><span  style= "color:#a6d96a">▉</span>61 - 79</div>',
+        elem5: '<div><span  style= "color:#1a9641">▉</span>80 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -196,11 +196,11 @@ var legends = {
     VIV_ALQ: {
         title: "Viviendas alquiladas",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#809bba">▉</span>0 - 8</div>',
-        elem2: '<div><span  style= "color:#4575b5">▉</span>9 - 18</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>19 - 31</div>',
-        elem4: '<div><span  style= "color:#f59869">▉</span>32 - 60</div>',
-        elem5: '<div><span  style= "color:#d62f27">▉</span>61 - 100</div>',
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 8</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>9 - 18</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>19 - 31</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>32 - 60</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>61 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -208,11 +208,11 @@ var legends = {
     P_ESCO: {
         title: "Años promedio educación",
         subtitle: "años",
-        elem1: '<div><span  style= "color:#809bba">▉</span>15 - 18</div>',
-        elem2: '<div><span  style= "color:#4575b5">▉</span>13 - 14</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>11 - 12</div>',
-        elem4: '<div><span  style= "color:#f59869">▉</span>9 - 10</div>',
-        elem5: '<div><span  style= "color:#d62f27">▉</span>0 - 8</div>',
+        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 8</div>',
+        elem2: '<div><span  style= "color:#fdae61">▉</span>9 - 10</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>11 - 12</div>',
+        elem4: '<div><span  style= "color:#a6d96a">▉</span>13 - 15</div>',
+        elem5: '<div><span  style= "color:#1a9641">▉</span>16 - 18</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -220,11 +220,11 @@ var legends = {
     T_DESEM: {
         title: "Tasa de desempleo",
         subtitle: "%",
-        elem1: '<div><span  style= "color:#809bba">▉</span>0 - 4</div>',
-        elem2: '<div><span  style= "color:#4575b5">▉</span>5 - 7</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>8 - 16</div>',
-        elem4: '<div><span  style= "color:#f59869">▉</span>17 - 50</div>',
-        elem5: '<div><span  style= "color:#d62f27">▉</span>51 - 100</div>',
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 4</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>5 - 7</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>8 - 16</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>17 - 50</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>51 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -232,16 +232,15 @@ var legends = {
     EMPLEO: {
         title: "Empleo",
         subtitle: "%",
-        elem1: '<div><span  style= "color:#809bba">▉</span>82 - 100</div>',
-        elem2: '<div><span  style= "color:#4575b5">▉</span>67 - 81</div>', 
-        elem3: '<div><span  style= "color:#ffffbf">▉</span>59 - 66</div>',
-        elem4: '<div><span  style= "color:#f59869">▉</span>38 - 58</div>',
-        elem5: '<div><span  style= "color:#d62f27">▉</span>0 - 37</div>',
+        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 40</div>',
+        elem2: '<div><span  style= "color:#fdae61">▉</span>41 - 55</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>56 - 60</div>',
+        elem4: '<div><span  style= "color:#a6d96a">▉</span>61 - 75</div>',
+        elem5: '<div><span  style= "color:#1a9641">▉</span>76 - 100</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
     },
-
 }
 
 var indi = L.geoJson(Manzana, {
@@ -259,80 +258,80 @@ manzanas = L.geoJson(Manzana, {
 
 function setProColor(d) {
     if (currentStyle === 'DEN_POB') {
-        return d > 26 ? '#d62f27' :
-            d > 17 ? '#f59869' :
-                d > 10 ? '#ffffbf' :
-                    d > 4 ? '#4575b5' :
-                        '#809bba';
+        return d > 26 ? '#d7191c' :
+            d > 17 ? '#fdae61' :
+                d > 10 ? '#f4f466' :
+                    d > 4 ? '#a6d96a' :
+                        '#1a9641';
     }else if (currentStyle === 'VIV_ADE') {
-        return d > 79 ? '#809bba' :
-            d > 60 ? '#4575b5' :
-                d > 38 ? '#ffffbf' :
-                    d > 14 ? '#f59869' :
-                        '#d62f27';
+        return d > 79 ? '#1a9641' :
+            d > 60 ? '#a6d96a' :
+                d > 38 ? '#f4f466' :
+                    d > 14 ? '#fdae61' :
+                        '#d7191c';
     } 
     else if (currentStyle === 'AGUA') {
-        return d > 84 ? '#809bba' :
-            d > 67 ? '#4575b5' :
-                d > 43 ? '#ffffbf' :
-                    d > 16 ? '#f59869' :
-                        '#d62f27';
+        return d > 84 ? '#1a9641' :
+            d > 67 ? '#a6d96a' :
+                d > 43 ? '#f4f466' :
+                    d > 16 ? '#fdae61' :
+                        '#d7191c';
     } 
     else if (currentStyle === 'SAN') {
-        return d > 84 ? '#809bba' :
-            d > 67 ? '#4575b5' :
-                d > 44 ? '#ffffbf' :
-                    d > 20 ? '#f59869' :
-                        '#d62f27';
+        return d > 84 ? '#1a9641' :
+            d > 67 ? '#a6d96a' :
+                d > 44 ? '#f4f466' :
+                    d > 20 ? '#fdae61' :
+                        '#d7191c';
     }
     else if (currentStyle === 'ELEC') {
-        return d > 86 ? '#809bba' :
-            d > 71 ? '#4575b5' :
-                d > 51 ? '#ffffbf' :
-                    d > 24 ? '#f59869' :
-                        '#d62f27';
+        return d > 86 ? '#1a9641' :
+            d > 71 ? '#a6d96a' :
+                d > 51 ? '#f4f466' :
+                    d > 24 ? '#fdae61' :
+                        '#d7191c';
     }
     else if (currentStyle === 'INTER') {
-        return d > 79 ? '#809bba' :
-            d > 60 ? '#4575b5' :
-                d > 30 ? '#ffffbf' :
-                    d > 14 ? '#f59869' :
-                        '#d62f27';
+        return d > 79 ? '#1a9641' :
+            d > 60 ? '#a6d96a' :
+                d > 30 ? '#f4f466' :
+                    d > 14 ? '#fdae61' :
+                        '#d7191c';
     }
     else if (currentStyle === 'VIV_ALQ') {
-        return d > 60 ? '#d62f27' :
-            d > 31 ? '#f59869' :
-                d > 18 ? '#ffffbf' :
-                    d > 8 ? '#4575b5' :
-                        '#809bba';
+        return d > 60 ? '#d7191c' :
+            d > 31 ? '#fdae61' :
+                d > 18 ? '#f4f466' :
+                    d > 8 ? '#a6d96a' :
+                        '#1a9641';
     } 
     else if (currentStyle === 'P_ESCO') {
-        return d > 15 ? '#809bba':
-            d > 13 ?  '#4575b5':
-                d > 10 ? '#ffffbf' :
-                    d > 8 ? '#f59869':
-                        '#d62f27';
+        return d > 15 ? '#1a9641' :
+            d > 13? '#a6d96a' :
+                d > 10 ? '#f4f466' :
+                    d > 8 ? '#fdae61' :
+                        '#d7191c';
     } 
     else if (currentStyle === 'T_DESEM') {
-        return d > 50 ? '#d62f27' :
-                        d > 16 ? '#f59869' :
-                            d > 7 ? '#ffffbf' :
-                                d > 4 ? '#4575b5' :
-                                    '#809bba';
+        return d > 50 ? '#d7191c' :
+                    d > 16? '#fdae61' :
+                        d > 7 ? '#f4f466' :
+                            d > 5 ? '#a6d96a' :
+                            '#1a9641';
     } 
     else if (currentStyle === 'EMPLEO') {
-        return d > 81 ? '#809bba':
-                        d > 66 ?  '#4575b5':
-                            d > 58 ? '#ffffbf' :
-                                d > 37 ? '#f59869':
-                                    '#d62f27';
+        return d > 75 ? '#1a9641':
+                        d > 60 ?  '#a6d96a':
+                            d > 55 ? '#f4f466' :
+                                d > 40 ? '#fdae61':
+                                '#d7191c';
     } 
     else {
-        return d > 4 ? '#d7191c' :
-            d > 3 ? '#fdae61' :
-                d > 2 ? '#f4f466' :
-                    d > 1 ? '#a6d96a' :
-                        '#1a9641';
+        return d > 4000 ? '#1a9641':
+                        d > 3000 ?  '#a6d96a':
+                            d > 2000 ? '#f4f466' :
+                                d > 1000 ? '#fdae61':
+                                '#d7191c';
     }
 
 }
