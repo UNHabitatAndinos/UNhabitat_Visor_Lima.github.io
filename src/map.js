@@ -1,13 +1,17 @@
-// Create variable to hold map element, give initial settings to map
 var map = L.map('map', {
-    center: [-12, -77],
-    zoom: 11,
+    center: [-12.06, -76.98],
+    zoom: 10,
+    minZoom: 10,
+    scrollWheelZoom: false,
 });
 
+map.once('focus', function() { map.scrollWheelZoom.enable(); });
+
 L.easyButton('<img src="images/fullscreen.png">', function (btn, map) {
-    var cucu = [-12, -77];
-    map.setView(cucu, 11);
+    var cucu = [-12.06, -76.98];
+    map.setView(cucu, 10);
 }).addTo(map);
+
 
 var esriAerialUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services' +
     '/World_Imagery/MapServer/tile/{z}/{y}/{x}';
@@ -33,23 +37,63 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     this._div.innerHTML = (props ?
-        '<b> Personas ' + props.Personas + '</b> <br />' + '<br />' +
+        'Distrito ' + props.DISTRITO + '<br />' +
+        'Viviendas ' + props.VIVIEN + '<br />' +
+        'Hogares ' + props.HOG + '<br />' +
+        'Personas ' + props.Personas + '<br />' + '<br />' +
 
-        '<h4>Vivienda </h4>' +
-        '<b> Densidad poblacional: </b> ' + props.DEN_POB.toFixed(0)  + '<br />' +
-        '<b> Vivienda adecuada: </b> ' + props.VIV_ADE.toFixed(0) + ' %' + '<br />' +
-        '<b> Viviendas alquiladas: </b> ' + props.VIV_ALQ.toFixed(0) + ' %' + '<br />' +
-        '<b> Agua mejorada: </b> ' + props.AGUA.toFixed(0) + ' %' + '<br />' +
-        '<b> Saneamiento: </b> ' + props.SAN.toFixed(0) + ' %' + '<br />' +
-        '<b> Electricidad: </b> ' + props.ELEC.toFixed(0) + ' %' + '<br />' +
-        '<b> Internet: </b> ' + props.INTER.toFixed(0) + ' %'   + '<br />' + '<br />' +
+        '<b>Vivienda </b>' + '<br />' +
+        'Vivienda adecuada: ' + props.VIV_ADE.toFixed(0) + ' %' + '<br />' +
+        'Espacio vital suficiente: ' + props.ESP_VIT.toFixed(0) + ' %' + '<br />' +
+        'Agua mejorada: ' + props.AGUA.toFixed(0) + ' %' + '<br />' +
+        'Saneamiento: ' + props.SAN.toFixed(0) + ' %' + '<br />' +
+        'Electricidad: ' + props.ELEC.toFixed(0) + ' %' + '<br />' +
+        'Internet: ' + props.INTER.toFixed(0) + ' %'   + '<br />' + 
+        'Dependencia económica: ' + props.D_ECONO.toFixed(2) + '<br />' + '<br />' +
 
+        '<b>Salud</b>' + '<br />' +
+        'Proximidad equipamientos de salud: ' + props.DxP_SALUD.toFixed(0) + ' m' + '<br />' +
+        'Concentración de Pm10: ' + props.PM10.toFixed(2) + ' µg/m3' +  '<br />' +   
+        //'Contaminación residuos sólidos: ' + props.CON_SOL.toFixed(0) + ' %' + '<br />' + 
+        'Esperanza de vida al nacer: ' + props.E_VIDA.toFixed(0) + ' años' + '<br />'  +  '<br />' +   
+        
+        '<b>Educación, cultura y diversidad </b>' + '<br />' +
+        'Proximidad equipamientos culturales: ' + props.DxP_BIBLI.toFixed(0) + ' m' + '<br />' +
+        'Proximidad equipamientos educativos: ' + props.DxP_EDUC.toFixed(0) + ' m' + '<br />' +
+        'Diversidad tenencia: ' + props.MIX_TENE.toFixed(2) + '/1.79' + '<br />' +
+        'Diversidad nivel educativo: ' + props.MIX_EDU.toFixed(2) +'/2.20' +  '<br />' +
+        'Diversidad edades: ' + props.MIX_EDAD.toFixed(2) + '/1.79' + '<br />' +
+        'Diversidad etnias y razas: ' + props.MIX_ETNIA.toFixed(2) + '/1.61' +'<br />' +
+        'Años promedio educación: ' + props.ESC_ANOS.toFixed(0) + ' años'+ '<br />' +  '<br />' +  
+        
+        '<b>Espacios públicos, seguridad y recreación </b>' + '<br />' +
+        'Proximidad espacio público: ' + props.DxP_EP.toFixed(0) + ' m' + '<br />' +
+        'M² per capita de espacio público: ' + props.M2_ESP_PU.toFixed(2) + '<br />' +
+        'Densidad poblacional: ' + props.DEN_POB.toFixed(2) + '<br />' +
+        'Diversidad usos del suelo: ' + props.Shanon_Cel.toFixed(2) + '/1.61' +'<br />' + '<br />' +
 
-        '<h4>Oportunidades económicas </h4>' +
-        '<b> Desempleo: </b> ' + props.T_DESEM.toFixed(0) + ' %' + '<br />' +
-        '<b> Empleo: </b> ' + props.EMPLEO.toFixed(0) + ' %' : 'Seleccione una manzana');
+        '<b>Oportunidades económicas </b>' + '<br />' +
+        'Desempleo: ' + props.T_DESEM.toFixed(0) + ' %' + '<br />' +
+        'Empleo: ' + props.EMPLEO.toFixed(0) + ' %' : 'Seleccione una manzana');
 };
 info.addTo(map);
+
+
+function stylec(feature) {
+    return {
+        weight: 2,
+        opacity: 1,
+        color: '#ffffff',
+        fillOpacity: 0,
+        dashArray: '3',
+    };
+}
+
+var loc = L.geoJson(distrito, {
+    style: stylec,
+    onEachFeature: popupText,
+}).addTo(map);
+
 
 
 function highlightFeature(e) {
@@ -338,11 +382,11 @@ function setProColor(d) {
 
 function fillColor(feature) {
     return {
-        fillColor: (currentStyle && currentStyle !== 'default' && feature.properties[currentStyle]) ? setProColor(feature.properties[currentStyle]) : '#c3bfc2',
+        fillColor:  setProColor(feature.properties[currentStyle]),
         weight: 0.6,
         opacity: 0.1,
-        color: (currentStyle && currentStyle !== 'default') ? '#ffffff00' : '#c3bfc2', 
-        fillOpacity: (currentStyle && currentStyle !== 'default') ? 0.9 : 0.2,
+        color: (currentStyle) ? '#ffffff00' : '#c3bfc2', 
+        fillOpacity: (currentStyle) ? 0.7 : 0.5,
     };
 }
 
@@ -373,3 +417,7 @@ var layersControl = new L.Control.Layers(baseMaps, overlayMaps, {
 });
 map.addControl(layersControl);
 changeIndi({value: 'DEN_POB'});
+
+function popupText(feature, layer) {
+    layer.bindPopup('Distrito ' + feature.properties.DISTRITO + '<br />')
+}

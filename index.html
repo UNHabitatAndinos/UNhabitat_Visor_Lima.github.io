@@ -7,7 +7,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <title>Caracterización territorial</title>
+    <title>Marcador Inclusión Urbana</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
@@ -20,7 +20,7 @@
         }
 
         html, body, #top {
-            background: #525353;
+            background: #ffffff;
             width: 100%;
             height: 40px;
             left: 15px;
@@ -49,7 +49,7 @@
 
         #map {
             position: absolute;
-            top: 40px;
+            top: 0;
             bottom: 0;
             width: 100%;
         }
@@ -104,7 +104,7 @@
 
         .info {
             padding: 16px 10px;
-            font: 12px/13px Segoe UI, Segoe UI, Segoe UI;
+            font: 11px/12px Segoe UI, Segoe UI, Segoe UI;
             background: white;
             background: rgba(255, 255, 255, 0.8);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -127,41 +127,34 @@
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
-<script src="data/Manzana.js"></script>
+<script src="data/Grilla.js"></script>
+<script src="data/Distritos.js"></script>
 
-
-<div id="top">
-    <p style="text-align: center; color: rgb(255, 255, 255);">
-        <b>Marcador potencial Integración Urbana Cúcuta y Villa del Rosario<br/></b>
-</div>
-    <div id='legend'>
-</div>
-
-<div class="container">
-    <b>Seleccione indicador:</b>
-    <div class="custom-select">
-    <select name="layers" onclick= 'changeIndi(this);'>
-        <option id="DEN_POB" value="DEN_POB">Densidad residencial</option>
-        <option id="VIV_ADE" value="VIV_ADE">Vivienda adecuada</option>
-        <option id="AGUA" value="AGUA">Acceso a agua mejorada</option>
-        <option id="SAN" value="SAN">Acceso a saneamiento</option>
-        <option id="ELEC" value="ELEC">Acceso a electricidad</option>
-        <option id="INTER" value="INTER">Acceso a internet</option>
-        <option id="VIV_ALQ" value="VIV_ALQ">Viviendas alquiladas</option>
-        <option id="P_ESCO" value="P_ESCO">Años promedio educación</option>
-        <option id="T_DESEM" value="T_DESEM">Tasa de desempleo</option>
-        <option id="EMPLEO" value="EMPLEO">Empleo</option>
-    </select>
-</div>
-</div>
-
-
-<div id="logoContainer">
-    <img src="images/logo1.png" width="100%">
-</div>
 
 <div id="map">
+    <div id='legend'>
+    </div>
+    <div class="container">
+        <b>Seleccione indicador:</b>
+        <div class="custom-select">
+        <select name="layers" onclick= 'changeIndi(this);'>
+            <option id="DEN_POB" value="DEN_POB">Densidad residencial</option>
+            <option id="VIV_ADE" value="VIV_ADE">Vivienda adecuada</option>
+            <option id="AGUA" value="AGUA">Acceso a agua mejorada</option>
+            <option id="SAN" value="SAN">Acceso a saneamiento</option>
+            <option id="ELEC" value="ELEC">Acceso a electricidad</option>
+            <option id="INTER" value="INTER">Acceso a internet</option>
+            <option id="VIV_ALQ" value="VIV_ALQ">Viviendas alquiladas</option>
+            <option id="P_ESCO" value="P_ESCO">Años promedio educación</option>
+            <option id="T_DESEM" value="T_DESEM">Tasa de desempleo</option>
+            <option id="EMPLEO" value="EMPLEO">Empleo</option>
+        </select>
+    </div>
+    </div>  
     <script src='src/map.js'></script>
+    <div id="logoContainer">
+        <img src="images/logo1.png" width="100%">
+    </div>
 </div>
 
 
