@@ -43,24 +43,24 @@ info.update = function (props) {
         'Personas ' + props.Personas + '<br />' + '<br />' +
 
         '<b>Vivienda </b>' + '<br />' +
-        'Vivienda adecuada: ' + props.VIV_ADE.toFixed(0) + ' %' + '<br />' +
+        'Vivienda adecuada: ' + props.VIV_ADE1 + '<br />' +
         'Espacio vital suficiente: ' + props.ESP_VIT.toFixed(0) + ' %' + '<br />' +
-        'Agua mejorada: ' + props.AGUA.toFixed(0) + ' %' + '<br />' +
-        'Saneamiento: ' + props.SAN.toFixed(0) + ' %' + '<br />' +
-        'Electricidad: ' + props.ELEC.toFixed(0) + ' %' + '<br />' +
-        'Internet: ' + props.INTER.toFixed(0) + ' %'   + '<br />' + 
+        'Agua mejorada: ' + props.AGUA1 + '<br />' +
+        'Saneamiento: ' + props.SAN1 + '<br />' +
+        'Electricidad: ' + props.ELEC1 + '<br />' +
+        'Internet: ' + props.INTER1 + '<br />' + 
         'Dependencia económica: ' + props.D_ECONO.toFixed(2) + '<br />' + '<br />' +
 
         '<b>Salud</b>' + '<br />' +
         'Proximidad equipamientos de salud: ' + props.DxP_SALUD.toFixed(0) + ' m' + '<br />' +
         'Concentración de Pm10: ' + props.PM10.toFixed(2) + ' µg/m3' +  '<br />' +   
-        //'Contaminación residuos sólidos: ' + props.CON_SOL.toFixed(0) + ' %' + '<br />' + 
+        'Contaminación residuos sólidos: ' + props.CON_SOL.toFixed(0) + ' %' + '<br />' + 
         'Esperanza de vida al nacer: ' + props.E_VIDA.toFixed(0) + ' años' + '<br />'  +  '<br />' +   
         
         '<b>Educación, cultura y diversidad </b>' + '<br />' +
         'Proximidad equipamientos culturales: ' + props.DxP_BIBLI.toFixed(0) + ' m' + '<br />' +
         'Proximidad equipamientos educativos: ' + props.DxP_EDUC.toFixed(0) + ' m' + '<br />' +
-        'Diversidad tenencia: ' + props.MIX_TENE.toFixed(2) + '/1.79' + '<br />' +
+        'Diversidad tenencia: ' + props.MIX_TENE1 + '/1.79' + '<br />' +
         'Diversidad nivel educativo: ' + props.MIX_EDU.toFixed(2) +'/2.20' +  '<br />' +
         'Diversidad edades: ' + props.MIX_EDAD.toFixed(2) + '/1.79' + '<br />' +
         'Diversidad etnias y razas: ' + props.MIX_ETNIA.toFixed(2) + '/1.61' +'<br />' +
@@ -70,7 +70,7 @@ info.update = function (props) {
         'Proximidad espacio público: ' + props.DxP_EP.toFixed(0) + ' m' + '<br />' +
         'M² per capita de espacio público: ' + props.M2_ESP_PU.toFixed(2) + '<br />' +
         'Densidad poblacional: ' + props.DEN_POB.toFixed(2) + '<br />' +
-        'Diversidad usos del suelo: ' + props.Shanon_Cel.toFixed(2) + '/1.61' +'<br />' + '<br />' +
+        'Diversidad usos del suelo: ' + props.MIXTICIDAD.toFixed(2) + '/1.61' +'<br />' + '<br />' +
 
         '<b>Oportunidades económicas </b>' + '<br />' +
         'Desempleo: ' + props.T_DESEM.toFixed(0) + ' %' + '<br />' +
@@ -180,23 +180,35 @@ var legends = {
     VIV_ADE: {
         title: "Vivienda adecuada",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 14</div>',
-        elem2: '<div><span  style= "color:#fdae61">▉</span>15 - 38</div>', 
-        elem3: '<div><span  style= "color:#f4f466">▉</span>39 - 60</div>',
-        elem4: '<div><span  style= "color:#a6d96a">▉</span>61 - 79</div>',
-        elem5: '<div><span  style= "color:#1a9641">▉</span>80 - 100</div>',
+        elem1: '<div><span  style= "color:#1a9641">▉</span>71 - 100</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>55 - 70</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>36 - 54</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>16 - 35</div>', 
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0 - 15</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
     },
+    ESP_VIT: {
+        title: "Espacio vital suficiente",
+        subtitle: "% Viviendas",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>98 - 99</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>95 - 97</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>92 - 94</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>90 - 91</div>', 
+        elem5: '<div><span  style= "color:#d7191c">▉</span>87 - 89</div>',
+        elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
+        elem7: '',
+        elem8: "INEI Necesidades básicas insatisfechas ",
+    },
     AGUA: {
         title: "Acceso a agua mejorada",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 16</div>',
-        elem2: '<div><span  style= "color:#fdae61">▉</span>17 - 43</div>', 
-        elem3: '<div><span  style= "color:#f4f466">▉</span>44 - 67</div>',
-        elem4: '<div><span  style= "color:#a6d96a">▉</span>68 - 84</div>',
-        elem5: '<div><span  style= "color:#1a9641">▉</span>85 - 100</div>',
+        elem1: '<div><span  style= "color:#1a9641">▉</span>75 - 100</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>57 - 74</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>36 - 56</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>14 - 35</div>', 
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0 - 13</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -204,11 +216,11 @@ var legends = {
     SAN: {
         title: "Acceso a saneamiento",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 20</div>',
-        elem2: '<div><span  style= "color:#fdae61">▉</span>21 - 44</div>', 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>85 - 100</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>68 - 84</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>45 - 67</div>',
-        elem4: '<div><span  style= "color:#a6d96a">▉</span>68 - 84</div>',
-        elem5: '<div><span  style= "color:#1a9641">▉</span>85 - 100</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>21 - 44</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0 - 20</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -216,11 +228,11 @@ var legends = {
     ELEC: {
         title: "Acceso a electricidad",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 24</div>',
-        elem2: '<div><span  style= "color:#fdae61">▉</span>25 - 51</div>', 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>87 - 100</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>72 - 86</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>52 - 71</div>',
-        elem4: '<div><span  style= "color:#a6d96a">▉</span>72 - 86</div>',
-        elem5: '<div><span  style= "color:#1a9641">▉</span>87 - 100</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>25 - 51</div>', 
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0 - 24</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -228,42 +240,114 @@ var legends = {
     INTER: {
         title: "Acceso a internet",
         subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 14</div>',
-        elem2: '<div><span  style= "color:#fdae61">▉</span>15 - 38</div>', 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>80 - 100</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>61 - 79</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>39 - 60</div>',
-        elem4: '<div><span  style= "color:#a6d96a">▉</span>61 - 79</div>',
-        elem5: '<div><span  style= "color:#1a9641">▉</span>80 - 100</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>15 - 38</div>',  
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0 - 14</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
     },
-    VIV_ALQ: {
-        title: "Viviendas alquiladas",
-        subtitle: "% Viviendas",
-        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 8</div>',
-        elem2: '<div><span  style= "color:#a6d96a">▉</span>9 - 18</div>', 
-        elem3: '<div><span  style= "color:#f4f466">▉</span>19 - 31</div>',
-        elem4: '<div><span  style= "color:#fdae61">▉</span>32 - 60</div>',
-        elem5: '<div><span  style= "color:#d7191c">▉</span>61 - 100</div>',
-        elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
+    D_ECONO: {
+        title: "Dependencia económica",
+        subtitle: "Población/Población ocupada",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0.00 - 2.00</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>2.01 - 2.18</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>2.19 - 3.16</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>3.17 - 7.00</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>7.01 - 17.60</div>',
+        elem6: '',
         elem7: '',
-        elem8: "INEI, Censo Nacional Población y Vivienda 2017",
+        elem8: "DANE Censo Nacional Población y Vivienda 2018",
     },
-    P_ESCO: {
+    DxP_SALUD: {
+        title: "Proximidad equipamientos de salud",
+        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 500</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>501 - 1000</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>1001 - 3000</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>3001 - 5000</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>5001 - 15874</div>',
+        elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
+        elem7: '',
+        elem8: "Instituto Catastral de Lima",
+    },
+    PM10: {
+        title: "Concentración Pm10",
+        subtitle: "µg/m3",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>34 - 58</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>59 - 73</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>74 - 87</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>88 - 101</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>102 - 120</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "Ministerio de Salud Programa Nacional de Vigilancia Sanitaria de Calidad del Aire Lima - Callao",
+    },
+    CON_SOL: {
+        title: "Contaminación residuos sólidos",
+        subtitle: "% Distrito",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 1</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>2 - 4</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>5 - 13</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>14 - 27</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>28 - 57</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI",
+    },
+    E_VIDA: {
+        title: "Esperanza de vida al nacer",
+        subtitle: "Años",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>85 - 86</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>83 - 84</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>81 - 82</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>79 - 80</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>77 - 78</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "Índice de Desarrollo Humano distrital",
+    },
+    DxP_BIBLI: {
+        title: "Proximidad equipamientos culturales",
+        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 500</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>501 - 1000</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>1001 - 5000</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>5001 - 10000</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>10001 - 27821</div>',
+        elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
+        elem7: '',
+        elem8: "Instituto Catastral de Lima, Google maps",
+    },
+    DxP_EDUC: {
+        title: "Proximidad equipamientos educativos",
+        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 300</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>301 - 500</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>501 - 1000</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>1001 - 2000</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>2001 - 5112</div>',
+        elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
+        elem7: '',
+        elem8: "Ministerio de Educación del Perú",
+    },
+    ESC_ANOS: {
         title: "Años promedio educación",
         subtitle: "años",
-        elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 8</div>',
-        elem2: '<div><span  style= "color:#fdae61">▉</span>9 - 10</div>', 
-        elem3: '<div><span  style= "color:#f4f466">▉</span>11 - 12</div>',
-        elem4: '<div><span  style= "color:#a6d96a">▉</span>13 - 15</div>',
-        elem5: '<div><span  style= "color:#1a9641">▉</span>16 - 18</div>',
-        elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
+        elem1: '<div><span  style= "color:#1a9641">▉</span>16 - 18</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>14 - 15</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>12 - 13</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>10 - 11</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0 - 9</div>',
+        elem6: '',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
     },
     T_DESEM: {
         title: "Tasa de desempleo",
-        subtitle: "%",
+        subtitle: "% Personas",
         elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 4</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>5 - 7</div>', 
         elem3: '<div><span  style= "color:#f4f466">▉</span>8 - 16</div>',
@@ -275,15 +359,99 @@ var legends = {
     },
     EMPLEO: {
         title: "Empleo",
-        subtitle: "%",
+        subtitle: "% Personas",
         elem1: '<div><span  style= "color:#d7191c">▉</span>0 - 40</div>',
         elem2: '<div><span  style= "color:#fdae61">▉</span>41 - 55</div>', 
         elem3: '<div><span  style= "color:#f4f466">▉</span>56 - 60</div>',
         elem4: '<div><span  style= "color:#a6d96a">▉</span>61 - 75</div>',
         elem5: '<div><span  style= "color:#1a9641">▉</span>76 - 100</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI, Censo Nacional Población y Vivienda 2017",
+    },
+    MIX_TENE: {
+        title: "Diversidad tenencia",
+        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>1.12 - 1.39</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>0.95 - 1.11</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>0.73 - 0.94</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>0.43 - 0.72</div>',  
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0.00 - 0.42</div>',
         elem6: '<div><span  style= "color:#c3bfc2">▉</span>Sin información</div>',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
+    },
+    MIX_EDU: {
+        title: "Diversidad nivel educativo",
+        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>1.35 - 1.67</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>1.16 - 1.34</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>0.92 - 1.15</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>0.42 - 0.91</div>',  
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0.00 - 0.41</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI, Censo Nacional Población y Vivienda 2017",
+    },
+    MIX_EDAD: {
+        title: "Diversidad edades",
+        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>1.56 - 1.67</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>1.51 - 1.55</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>1.36 - 1.50</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>0.10 - 1.35</div>',  
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0.00 - 0.09</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI, Censo Nacional Población y Vivienda 2017",
+    },
+    MIX_ETNIA: {
+        title: "Diversidad etnias y razas",
+        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>1.02 - 1.53</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>0.90 - 1.01</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>0.75 - 0.89</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>0.39 - 0.74</div>',  
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0.00 - 0.38</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI, Censo Nacional Población y Vivienda 2017",
+    },
+    DxP_EP: {
+        title: "Proximidad espacio público",
+        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 500</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>501 - 1000</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>1001 - 3000</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>3001 - 5000</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>5001 - 14437</div>',
+        elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
+        elem7: '',
+        elem8: "Instituto Catastral de Lima",
+    },
+    M2_ESP_PU: {
+        title: "M² per capita de espacio público",
+        subtitle: "m²/habitante",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>Mayor 5.81</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>3.53 - 5.80</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>1.90 - 3.52</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>0.61 - 0.89</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0.00 - 0.60</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "Instituto Catastral de Lima",
+    },
+    MIXTICIDAD: {
+        title: "Diversidad usos del suelo",
+        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0.54 - 1.09</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>0.30 - 0.53</div>',
+        elem3: '<div><span  style= "color:#f4f466">▉</span>0.18 - 0.29</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>0.08 - 0.17</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0.00 - 0.07</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "Instituto Catastral de Lima",
     },
 }
 
@@ -308,52 +476,156 @@ function setProColor(d) {
                     d > 4 ? '#a6d96a' :
                         '#1a9641';
     }else if (currentStyle === 'VIV_ADE') {
-        return d > 79 ? '#1a9641' :
-            d > 60 ? '#a6d96a' :
-                d > 38 ? '#f4f466' :
+        return d > 100 ? '#c3bfc2' :
+                d > 70 ? '#1a9641' :
+                 d > 54 ? '#a6d96a' :
+                  d > 35 ? '#f4f466' :
                     d > 14 ? '#fdae61' :
+                        '#d7191c';
+    }else if (currentStyle === 'ESP_VIT') {
+        return d > 100 ? '#c3bfc2' :
+                d > 97 ? '#1a9641' :
+                 d > 94 ? '#a6d96a' :
+                  d > 91 ? '#f4f466' :
+                    d > 89 ? '#fdae61' :
                         '#d7191c';
     } 
     else if (currentStyle === 'AGUA') {
-        return d > 84 ? '#1a9641' :
-            d > 67 ? '#a6d96a' :
-                d > 43 ? '#f4f466' :
-                    d > 16 ? '#fdae61' :
+        return d > 100 ? '#c3bfc2' :
+                d > 74 ? '#1a9641' :
+                 d > 56 ? '#a6d96a' :
+                  d > 35 ? '#f4f466' :
+                    d > 13 ? '#fdae61' :
                         '#d7191c';
     } 
     else if (currentStyle === 'SAN') {
-        return d > 84 ? '#1a9641' :
+        return d > 100 ? '#c3bfc2' :
+        d > 84 ? '#1a9641' :
             d > 67 ? '#a6d96a' :
                 d > 44 ? '#f4f466' :
                     d > 20 ? '#fdae61' :
                         '#d7191c';
     }
     else if (currentStyle === 'ELEC') {
-        return d > 86 ? '#1a9641' :
+        return d > 100 ? '#c3bfc2' :
+        d > 86 ? '#1a9641' :
             d > 71 ? '#a6d96a' :
                 d > 51 ? '#f4f466' :
                     d > 24 ? '#fdae61' :
                         '#d7191c';
     }
     else if (currentStyle === 'INTER') {
-        return d > 79 ? '#1a9641' :
+        return d > 100 ? '#c3bfc2' :
+        d > 79 ? '#1a9641' :
             d > 60 ? '#a6d96a' :
                 d > 30 ? '#f4f466' :
                     d > 14 ? '#fdae61' :
                         '#d7191c';
     }
-    else if (currentStyle === 'VIV_ALQ') {
-        return d > 60 ? '#d7191c' :
-            d > 31 ? '#fdae61' :
-                d > 18 ? '#f4f466' :
-                    d > 8 ? '#a6d96a' :
+    else if (currentStyle === 'D_ECONO') {
+        return d > 7 ? '#d7191c' :
+            d > 3.16 ? '#fdae61' :
+                d > 2.18 ? '#f4f466' :
+                    d > 2 ? '#a6d96a' :
                         '#1a9641';
     } 
-    else if (currentStyle === 'P_ESCO') {
+    else if (currentStyle === 'DxP_SALUD') {
+        return d > 5000 ? '#d7191c' :
+                    d > 3000? '#fdae61' :
+                         d > 1000 ? '#f4f466' :
+                                d > 500 ? '#a6d96a' :
+                                '#1a9641';
+    } 
+    else if (currentStyle === 'PM10') {
+        return d > 101 ? '#d7191c' :
+                    d > 87 ? '#fdae61' :
+                         d > 73 ? '#f4f466' :
+                                d > 58 ? '#a6d96a' :
+                                '#1a9641';
+    } 
+    else if (currentStyle === 'CON_SOL') {
+        return d > 27 ? '#d7191c' :
+                    d > 13 ? '#fdae61' :
+                         d > 4 ? '#f4f466' :
+                                d > 1 ? '#a6d96a' :
+                                '#1a9641';
+    } 
+    else if (currentStyle === 'E_VIDA') {
+        return d > 84 ? '#1a9641' :
+            d > 82 ? '#a6d96a' :
+                d > 80 ? '#f4f466' :
+                    d > 78 ? '#fdae61' :
+                        '#d7191c';
+    } 
+    else if (currentStyle === 'DxP_BIBLI') {
+        return d > 10000 ? '#d7191c' :
+                    d > 5000? '#fdae61' :
+                         d > 1000 ? '#f4f466' :
+                                d > 500 ? '#a6d96a' :
+                                '#1a9641';
+    } 
+    else if (currentStyle === 'DxP_EDUC') {
+        return d > 2000 ? '#d7191c' :
+                    d > 1000? '#fdae61' :
+                         d > 500 ? '#f4f466' :
+                                d > 300 ? '#a6d96a' :
+                                '#1a9641';
+    }
+    else if (currentStyle === 'MIX_TENE') {
+        return d > 100 ? '#c3bfc2' :
+        d > 1.11 ? '#1a9641' :
+            d > 0.94 ? '#a6d96a' :
+                d > 0.72 ? '#f4f466' :
+                    d > 0.42 ? '#fdae61' :
+                        '#d7191c';
+    } 
+    else if (currentStyle === 'MIX_EDU') {
+        return d > 1.34 ? '#1a9641' :
+            d > 1.15 ? '#a6d96a' :
+                d > 0.91 ? '#f4f466' :
+                    d > 0.40 ? '#fdae61' :
+                        '#d7191c';
+    } 
+    else if (currentStyle === 'MIX_EDAD') {
+        return d > 1.55 ? '#1a9641' :
+            d > 1.50 ? '#a6d96a' :
+                d > 1.35 ? '#f4f466' :
+                    d > 0.09 ? '#fdae61' :
+                        '#d7191c';
+    } 
+    else if (currentStyle === 'MIX_ETNIA') {
+        return d > 1.01 ? '#1a9641' :
+            d > 0.89 ? '#a6d96a' :
+                d > 0.74 ? '#f4f466' :
+                    d > 0.38 ? '#fdae61' :
+                        '#d7191c';
+    } 
+    else if (currentStyle === 'ESC_ANOS') {
         return d > 15 ? '#1a9641' :
             d > 13? '#a6d96a' :
-                d > 10 ? '#f4f466' :
-                    d > 8 ? '#fdae61' :
+                d > 11 ? '#f4f466' :
+                    d > 9 ? '#fdae61' :
+                        '#d7191c';
+    } 
+    else if (currentStyle === 'DxP_EP') {
+        return d > 5000 ? '#d7191c' :
+                    d > 3000? '#fdae61' :
+                         d > 1000 ? '#f4f466' :
+                                d > 500 ? '#a6d96a' :
+                                '#1a9641';
+    }
+    else if (currentStyle === 'M2_ESP_PU') {
+        return d > 5.80 ? '#1a9641' :
+            d > 3.52? '#a6d96a' :
+                d > 1.89 ? '#f4f466' :
+                    d > 0.60 ? '#fdae61' :
+                        '#d7191c';
+    } 
+    else if (currentStyle === 'MIXTICIDAD') {
+        return d > 0.53 ? '#1a9641' :
+            d > 0.29 ? '#a6d96a' :
+                d > 0.17 ? '#f4f466' :
+                    d > 0.07 ? '#fdae61' :
                         '#d7191c';
     } 
     else if (currentStyle === 'T_DESEM') {

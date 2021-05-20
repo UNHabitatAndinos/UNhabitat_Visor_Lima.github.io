@@ -98,7 +98,7 @@
         }
 
         p {
-            font: 15px/8px Segoe UI, Segoe UI, Segoe UI;
+            font: 15px/12px Segoe UI, Segoe UI, Segoe UI;
 
         }
 
@@ -134,29 +134,60 @@
 <div id="map">
     <div id='legend'>
     </div>
+    <script src='src/map.js'></script>
+
     <div class="container">
         <b>Seleccione indicador:</b>
         <div class="custom-select">
         <select name="layers" onclick= 'changeIndi(this);'>
-            <option id="DEN_POB" value="DEN_POB">Densidad residencial</option>
+            <option id="VEN" value="VEN">Población de origen Venezuela</option>  
+            <optgroup label="Vivienda"></optgroup>
             <option id="VIV_ADE" value="VIV_ADE">Vivienda adecuada</option>
+            <option id="ESP_VIT" value="ESP_VIT">Espacio vital suficiente</option>
             <option id="AGUA" value="AGUA">Acceso a agua mejorada</option>
-            <option id="SAN" value="SAN">Acceso a saneamiento</option>
-            <option id="ELEC" value="ELEC">Acceso a electricidad</option>
+            <option id="SAN" value="SAN">Acceso a saneamiento</option>   
+            <option id="ELEC" value="ELEC">Acceso a electricidad</option> 
             <option id="INTER" value="INTER">Acceso a internet</option>
-            <option id="VIV_ALQ" value="VIV_ALQ">Viviendas alquiladas</option>
-            <option id="P_ESCO" value="P_ESCO">Años promedio educación</option>
+            <option id="D_ECONO" value="D_ECONO">Dependencia económica</option>
+            </optgroup>
+            <optgroup label="Salud"></optgroup>
+            <option id="DxP_SALUD" value="DxP_SALUD">Proximidad equipamientos de salud</option>
+            <option id="PM10" value="PM10">Concentración de Pm10</option>
+            <option id="CON_SOL" value="CON_SOL">Contaminación de residuos sólidos</option>
+            <option id="E_VIDA" value="E_VIDA">Esperanza de vida al nacer</option>
+            </optgroup>
+            <optgroup label="Educación, cultura y diversidad"></optgroup>
+            <option id="DxP_BIBLI" value="DxP_BIBLI">Proximidad equipamientos culturales</option>
+            <option id="DxP_EDUC" value="DxP_EDUC">Proximidad equipamientos educativos</option>
+            <option id="MIX_TENE" value="MIX_TENE">Diversidad tenencia</option> 
+            <option id="MIX_EDU" value="MIX_EDU">Diversidad nivel educativo</option> 
+            <option id="MIX_EDAD" value="MIX_EDAD">Diversidad edades</option> 
+            <option id="MIX_ETNIA" value="MIX_ETNIA">Diversidad etnias y razas</option> 
+            <option id="ESC_ANOS" value="ESC_ANOS">Años promedio educación</option>
+            </optgroup>
+            <optgroup label="Espacios públicos, seguridad, recreación"></optgroup>
+            <option id="DxP_EP" value="DxP_EP">Proximidad espacio público</option>  
+            <option id="M2_ESP_PU" value="M2_ESP_PU">M² per capita de espacio público</option> 
+            <option id="DEN_POB" value="DEN_POB" selected>Densidad residencial</option>
+            <option id="MIXTICIDAD" value="MIXTICIDAD">Diversidad usos del suelo</option>
+            </optgroup>
+            <optgroup label="Oportunidades económicas"></optgroup>
             <option id="T_DESEM" value="T_DESEM">Tasa de desempleo</option>
             <option id="EMPLEO" value="EMPLEO">Empleo</option>
+            </optgroup>          
         </select>
     </div>
-    </div>  
-    <script src='src/map.js'></script>
+    </div>
+
     <div id="logoContainer">
         <img src="images/logo1.png" width="100%">
     </div>
-</div>
+    
+    <div id="logoContainer">
+        <img src="images/logo1.png" width="100%">
+    </div>
 
+</div>
 
 </body>
 </html>
