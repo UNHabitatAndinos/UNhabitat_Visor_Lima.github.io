@@ -40,7 +40,8 @@ info.update = function (props) {
         'Distrito ' + props.DISTRITO + '<br />' +
         'Viviendas ' + props.VIVIEN + '<br />' +
         'Hogares ' + props.HOG + '<br />' +
-        'Personas ' + props.Personas + '<br />' + '<br />' +
+        'Personas ' + props.Personas + '<br />' +
+        'Población de origen Venezuela ' + props.D_VEN  + '<br />' +  '<br />' +  
 
         '<b>Vivienda </b>' + '<br />' +
         'Vivienda adecuada: ' + props.VIV_ADE1 + '<br />' +
@@ -70,9 +71,12 @@ info.update = function (props) {
         'Proximidad espacio público: ' + props.DxP_EP.toFixed(0) + ' m' + '<br />' +
         'M² per capita de espacio público: ' + props.M2_ESP_PU.toFixed(2) + '<br />' +
         'Densidad poblacional: ' + props.DEN_POB.toFixed(2) + '<br />' +
+        'Tasa de hurtos x 100mil habitantes: ' + props.HURTOS.toFixed(0) + '<br />' +
+        'Tasa de homicidios x 100mil habitantes: ' + props.HOMICIDIOS.toFixed(0) + '<br />' +
         'Diversidad usos del suelo: ' + props.MIXTICIDAD.toFixed(2) + '/1.61' +'<br />' + '<br />' +
 
         '<b>Oportunidades económicas </b>' + '<br />' +
+        'Proporción de empresas: ' + props.P_EMPRE.toFixed(2)  + '<br />' +
         'Desempleo: ' + props.T_DESEM.toFixed(0) + ' %' + '<br />' +
         'Empleo: ' + props.EMPLEO.toFixed(0) + ' %' : 'Seleccione una manzana');
 };
@@ -453,6 +457,54 @@ var legends = {
         elem7: '',
         elem8: "Instituto Catastral de Lima",
     },
+    HURTOS: {
+        title: "Tasa de hurtos",
+        subtitle: "Hurtos x 100mil habitantes",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>15 - 296</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>297 - 419</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>420 - 575</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>576 - 1082</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>1083 - 1741</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI",
+    },
+    HOMICIDIOS: {
+        title: "Tasa de homicidios",
+        subtitle: "Homicidios x 100mil habitantes",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 5</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>6 - 7</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>8 - 11</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>12 - 16</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>17 - 24</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI",
+    },
+    VEN: {
+        title: "Población de origen Venezuela",
+        subtitle: "Personas",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>2901 - 10637</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>10638 - 20307</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>20308 - 28817</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>28818 - 40614</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>40615 - 58213</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "Municipalidad Metropolitana de Lima",
+    },
+    P_EMPRE: {
+        title: "Proporción de empresas",
+        subtitle: "Relación de cantidad de empresas en la grilla",
+        elem1: '<div><span  style= "color:#1a9641">▉</span>26.37 - 54.76</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>10.37 - 26.36</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>5.42 - 10.36</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>2.47 - 5.41</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>0.33 - 2.46</div>',
+        elem6: '',
+        elem7: '',
+        elem8: "INEI",
+    },
 }
 
 var indi = L.geoJson(Manzana, {
@@ -640,6 +692,34 @@ function setProColor(d) {
                         d > 60 ?  '#a6d96a':
                             d > 55 ? '#f4f466' :
                                 d > 40 ? '#fdae61':
+                                '#d7191c';
+    } 
+    else if (currentStyle === 'HOMICIDIOS') {
+        return d >16 ? '#d7191c' :
+                    d > 11? '#fdae61' :
+                        d > 7 ? '#f4f466' :
+                            d > 5 ? '#a6d96a' :
+                            '#1a9641';
+    } 
+    else if (currentStyle === 'HURTOS') {
+        return d >1082 ? '#d7191c' :
+                    d > 575 ? '#fdae61' :
+                        d > 419 ? '#f4f466' :
+                            d > 296 ? '#a6d96a' :
+                            '#1a9641';
+    } 
+    else if (currentStyle === 'VEN') {
+        return d >40614 ? '#d7191c' :
+                    d > 28817 ? '#fdae61' :
+                        d > 20307 ? '#f4f466' :
+                            d > 10637 ? '#a6d96a' :
+                            '#1a9641';
+    } 
+    else if (currentStyle === 'P_EMPRE') {
+        return d > 26.36 ? '#1a9641':
+                        d > 10.36 ?  '#a6d96a':
+                            d > 5.41 ? '#f4f466' :
+                                d > 2.46 ? '#fdae61':
                                 '#d7191c';
     } 
     else {
