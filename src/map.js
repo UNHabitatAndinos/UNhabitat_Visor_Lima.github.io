@@ -76,7 +76,7 @@ info.update = function (props) {
         'Diversidad usos del suelo: ' + props.MIXTICIDAD.toFixed(2) + '/1.61' +'<br />' + '<br />' +
 
         '<b>Oportunidades económicas </b>' + '<br />' +
-        'Proporción de empresas: ' + props.P_EMPRE.toFixed(2)  + '<br />' +
+        'Proximidad a empresas: ' + props.P_EMPRE.toFixed(2)  + '<br />' +
         'Desempleo: ' + props.T_DESEM.toFixed(0) + ' %' + '<br />' +
         'Empleo: ' + props.EMPLEO.toFixed(0) + ' %' : 'Seleccione una manzana');
 };
