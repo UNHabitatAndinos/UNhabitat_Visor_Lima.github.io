@@ -267,7 +267,7 @@ var legends = {
     },
     DxP_SALUD: {
         title: "Proximidad equipamientos de salud",
-        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        subtitle: "Distancia en metros con factor de inclinación del terreno", 
         elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 500</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>501 - 1000</div>', 
         elem3: '<div><span  style= "color:#f4f466">▉</span>1001 - 3000</div>',
@@ -275,7 +275,7 @@ var legends = {
         elem5: '<div><span  style= "color:#d7191c">▉</span>5001 - 15874</div>',
         elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
         elem7: '',
-        elem8: "Instituto Catastral de Lima",
+        elem8: "Instituto Catastral de Lima 2018",
     },
     PM10: {
         title: "Concentración Pm10",
@@ -287,7 +287,7 @@ var legends = {
         elem5: '<div><span  style= "color:#d7191c">▉</span>102 - 120</div>',
         elem6: '',
         elem7: '',
-        elem8: "Ministerio de Salud Programa Nacional de Vigilancia Sanitaria de Calidad del Aire Lima - Callao",
+        elem8: "Ministerio de Salud Programa Nacional de Vigilancia Sanitaria de Calidad del Aire Lima - Callao 2019",
     },
     CON_SOL: {
         title: "Contaminación residuos sólidos",
@@ -299,7 +299,7 @@ var legends = {
         elem5: '<div><span  style= "color:#d7191c">▉</span>28 - 57</div>',
         elem6: '',
         elem7: '',
-        elem8: "INEI",
+        elem8: "INEI, Censo Nacional Población y Vivienda 2017",
     },
     E_VIDA: {
         title: "Esperanza de vida al nacer",
@@ -315,7 +315,7 @@ var legends = {
     },
     DxP_BIBLI: {
         title: "Proximidad equipamientos culturales",
-        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        subtitle: "Distancia en metros con factor de inclinación del terreno", 
         elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 500</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>501 - 1000</div>', 
         elem3: '<div><span  style= "color:#f4f466">▉</span>1001 - 5000</div>',
@@ -323,11 +323,11 @@ var legends = {
         elem5: '<div><span  style= "color:#d7191c">▉</span>10001 - 27821</div>',
         elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
         elem7: '',
-        elem8: "Instituto Catastral de Lima, Google maps",
+        elem8: "Instituto Catastral de Lima, Google maps 2020",
     },
     DxP_EDUC: {
         title: "Proximidad equipamientos educativos",
-        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        subtitle: "Distancia en metros con factor de inclinación del terreno",  
         elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 300</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>301 - 500</div>', 
         elem3: '<div><span  style= "color:#f4f466">▉</span>501 - 1000</div>',
@@ -335,7 +335,7 @@ var legends = {
         elem5: '<div><span  style= "color:#d7191c">▉</span>2001 - 5112</div>',
         elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
         elem7: '',
-        elem8: "Ministerio de Educación del Perú",
+        elem8: "Ministerio de Educación del Perú 2018",
     },
     ESC_ANOS: {
         title: "Años promedio educación",
@@ -375,7 +375,7 @@ var legends = {
     },
     MIX_TENE: {
         title: "Diversidad tenencia",
-        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        subtitle: "Índice de Shannon-Wienner -  Nivel de diversidad por grilla",
         elem1: '<div><span  style= "color:#1a9641">▉</span>1.12 - 1.39</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>0.95 - 1.11</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>0.73 - 0.94</div>',
@@ -387,7 +387,7 @@ var legends = {
     },
     MIX_EDU: {
         title: "Diversidad nivel educativo",
-        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        subtitle: "Índice de Shannon-Wienner -  Nivel de diversidad por grilla",
         elem1: '<div><span  style= "color:#1a9641">▉</span>1.35 - 1.67</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>1.16 - 1.34</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>0.92 - 1.15</div>',
@@ -399,7 +399,7 @@ var legends = {
     },
     MIX_EDAD: {
         title: "Diversidad edades",
-        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        subtitle: "Índice de Shannon-Wienner -  Nivel de diversidad por grilla",
         elem1: '<div><span  style= "color:#1a9641">▉</span>1.56 - 1.67</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>1.51 - 1.55</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>1.36 - 1.50</div>',
@@ -411,7 +411,7 @@ var legends = {
     },
     MIX_ETNIA: {
         title: "Diversidad etnias y razas",
-        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        subtitle: "Índice de Shannon-Wienner -  Nivel de diversidad por grilla",
         elem1: '<div><span  style= "color:#1a9641">▉</span>1.02 - 1.53</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>0.90 - 1.01</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>0.75 - 0.89</div>',
@@ -423,7 +423,7 @@ var legends = {
     },
     DxP_EP: {
         title: "Proximidad espacio público",
-        subtitle: "Distancia en m x Factor inclinación del terreno", 
+        subtitle: "Distancia en metros con factor de inclinación del terreno", 
         elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 500</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>501 - 1000</div>', 
         elem3: '<div><span  style= "color:#f4f466">▉</span>1001 - 3000</div>',
@@ -447,7 +447,7 @@ var legends = {
     },
     MIXTICIDAD: {
         title: "Diversidad usos del suelo",
-        subtitle: "Índice de Shanon -  Nivel de diversidad por grilla", 
+        subtitle: "Índice de Shannon-Wienner -  Nivel de diversidad por grilla",
         elem1: '<div><span  style= "color:#1a9641">▉</span>0.54 - 1.09</div>',
         elem2: '<div><span  style= "color:#a6d96a">▉</span>0.30 - 0.53</div>',
         elem3: '<div><span  style= "color:#f4f466">▉</span>0.18 - 0.29</div>',
@@ -467,7 +467,7 @@ var legends = {
         elem5: '<div><span  style= "color:#d7191c">▉</span>1083 - 1741</div>',
         elem6: '',
         elem7: '',
-        elem8: "INEI",
+        elem8: "Datacrim - INEI 2019",
     },
     HOMICIDIOS: {
         title: "Tasa de homicidios",
@@ -479,7 +479,7 @@ var legends = {
         elem5: '<div><span  style= "color:#d7191c">▉</span>17 - 24</div>',
         elem6: '',
         elem7: '',
-        elem8: "INEI",
+        elem8: "INEI Tasa de homicidios según distritos 2018",
     },
     VEN: {
         title: "Población de origen Venezuela",
