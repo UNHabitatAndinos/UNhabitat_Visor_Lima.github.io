@@ -85,11 +85,11 @@ info.addTo(map);
 
 function stylec(feature) {
     return {
-        weight: 2,
-        opacity: 1,
+        weight: 1,
+        opacity: 0.8,
         color: '#ffffff',
         fillOpacity: 0,
-        dashArray: '3',
+        dashArray: '5',
     };
 }
 
