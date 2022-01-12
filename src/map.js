@@ -44,12 +44,12 @@ info.update = function (props) {
         'Población de origen Venezuela ' + props.D_VEN  + '<br />' +  '<br />' +  
 
         '<b>Vivienda </b>' + '<br />' +
-        'Vivienda adecuada: ' + props.VIV_ADE1 + '<br />' +
+        'Vivienda adecuada: ' + props.VIV_ADE.toFixed(0)  + ' %' + '<br />' + 
         'Espacio vital suficiente: ' + props.ESP_VIT.toFixed(0) + ' %' + '<br />' +
-        'Agua mejorada: ' + props.AGUA1 + '<br />' +
-        'Saneamiento: ' + props.SAN1 + '<br />' +
-        'Electricidad: ' + props.ELEC1 + '<br />' +
-        'Internet: ' + props.INTER1 + '<br />' + 
+        'Agua mejorada: ' + props.AGUA.toFixed(0) + ' %' + '<br />' + 
+        'Saneamiento: ' + props.SAN.toFixed(0)  + ' %' + '<br />' + 
+        'Electricidad: ' + props.ELEC.toFixed(0) + ' %' + '<br />' + 
+        'Internet: ' + props.INTER.toFixed(0)  + ' %' + '<br />' + 
         'Dependencia económica: ' + props.D_ECONO.toFixed(2) + '<br />' + '<br />' +
 
         '<b>Salud</b>' + '<br />' +
@@ -61,7 +61,7 @@ info.update = function (props) {
         '<b>Educación, cultura y diversidad </b>' + '<br />' +
         'Proximidad equipamientos culturales: ' + props.DxP_BIBLI.toFixed(0) + ' m' + '<br />' +
         'Proximidad equipamientos educativos: ' + props.DxP_EDUC.toFixed(0) + ' m' + '<br />' +
-        'Diversidad tenencia: ' + props.MIX_TENE1 + '/1.79' + '<br />' +
+        'Diversidad tenencia: ' + props.MIX_TENE.toFixed(2) + '/1.79' + '<br />' +
         'Diversidad nivel educativo: ' + props.MIX_EDU.toFixed(2) +'/2.20' +  '<br />' +
         'Diversidad edades: ' + props.MIX_EDAD.toFixed(2) + '/1.79' + '<br />' +
         'Diversidad etnias y razas: ' + props.MIX_ETNIA.toFixed(2) + '/1.61' +'<br />' +
@@ -76,7 +76,7 @@ info.update = function (props) {
         'Diversidad usos del suelo: ' + props.MIXTICIDAD.toFixed(2) + '/1.61' +'<br />' + '<br />' +
 
         '<b>Oportunidades económicas </b>' + '<br />' +
-        'Proximidad a empresas: ' + props.P_EMPRE.toFixed(2)  + '<br />' +
+        'Proximidad a zonas de interés económico: ' + props.P_COMSER.toFixed(0) + ' m' + '<br />' +
         'Desempleo: ' + props.T_DESEM.toFixed(0) + ' %' + '<br />' +
         'Empleo: ' + props.EMPLEO.toFixed(0) + ' %' : 'Seleccione una manzana');
 };
@@ -106,8 +106,9 @@ function highlightFeature(e) {
     layer.setStyle({
         weight: 5,
         color: 'black',
-        dashArray: '',
-        fillColor: false
+        opacity: 0.8,
+        fillOpacity: 0,
+        dashArray: '5',
     });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
@@ -171,12 +172,12 @@ function changeLegend(props) {
 var legends = {
     DEN_POB: {
         title: "Densidad residencial",
-        subtitle: "Habitantes por km2",
-        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 4</div>',
-        elem2: '<div><span  style= "color:#a6d96a">▉</span>5 - 10</div>', 
-        elem3: '<div><span  style= "color:#f4f466">▉</span>11 - 17</div>',
-        elem4: '<div><span  style= "color:#fdae61">▉</span>17 - 26</div>',
-        elem5: '<div><span  style= "color:#d7191c">▉</span>27 - 59</div>',
+        subtitle: "Población/ha",
+        elem1: '<div><span  style= "color:#a6d96a">▉</span>0 - 149</div>',
+        elem2: '<div><span  style= "color:#1a9641">▉</span>150 - 200</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>201 - 250</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>251 - 300</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>301 - 573</div>',
         elem6: '',
         elem7: '',
         elem8: "INEI, Censo Nacional Población y Vivienda 2017",
@@ -493,17 +494,17 @@ var legends = {
         elem7: '',
         elem8: "Municipalidad Metropolitana de Lima",
     },
-    P_EMPRE: {
-        title: "Proporción de empresas",
-        subtitle: "Relación de cantidad de empresas en la grilla",
-        elem1: '<div><span  style= "color:#1a9641">▉</span>26.37 - 54.76</div>',
-        elem2: '<div><span  style= "color:#a6d96a">▉</span>10.37 - 26.36</div>', 
-        elem3: '<div><span  style= "color:#f4f466">▉</span>5.42 - 10.36</div>',
-        elem4: '<div><span  style= "color:#fdae61">▉</span>2.47 - 5.41</div>',
-        elem5: '<div><span  style= "color:#d7191c">▉</span>0.33 - 2.46</div>',
-        elem6: '',
+    P_COMSER: {
+        title: "Proximidad a zonas de interés económico",
+        subtitle: "Distancia en metros con factor de inclinación del terreno",  
+        elem1: '<div><span  style= "color:#1a9641">▉</span>0 - 500</div>',
+        elem2: '<div><span  style= "color:#a6d96a">▉</span>501 - 1000</div>', 
+        elem3: '<div><span  style= "color:#f4f466">▉</span>1001 - 3000</div>',
+        elem4: '<div><span  style= "color:#fdae61">▉</span>3001 - 5000</div>',
+        elem5: '<div><span  style= "color:#d7191c">▉</span>5001 - 15568</div>',
+        elem6: '<br />Factor de inclinación del terreno <br />A nivel: 1<br /> Ligeramente inclinada: 1.25<br /> Moderadamente inclinada: 1.5<br /> Fuertemente inclinada: 1.75<br /> Escarpada: 2<br />',
         elem7: '',
-        elem8: "INEI",
+        elem8: "Google Maps",
     },
 }
 
@@ -522,11 +523,11 @@ manzanas = L.geoJson(Manzana, {
 
 function setProColor(d) {
     if (currentStyle === 'DEN_POB') {
-        return d > 26 ? '#d7191c' :
-            d > 17 ? '#fdae61' :
-                d > 10 ? '#f4f466' :
-                    d > 4 ? '#a6d96a' :
-                        '#1a9641';
+        return d > 300 ? '#d7191c' :
+            d > 250 ? '#fdae61' :
+                d > 200 ? '#f4f466' :
+                    d > 149 ? '#1a9641' :
+                    '#a6d96a';
     }else if (currentStyle === 'VIV_ADE') {
         return d > 100 ? '#c3bfc2' :
                 d > 70 ? '#1a9641' :
@@ -715,12 +716,12 @@ function setProColor(d) {
                             d > 10637 ? '#a6d96a' :
                             '#1a9641';
     } 
-    else if (currentStyle === 'P_EMPRE') {
-        return d > 26.36 ? '#1a9641':
-                        d > 10.36 ?  '#a6d96a':
-                            d > 5.41 ? '#f4f466' :
-                                d > 2.46 ? '#fdae61':
-                                '#d7191c';
+    else if (currentStyle === 'P_COMSER') {
+        return d > 5000 ? '#d7191c' :
+                    d > 3000? '#fdae61' :
+                         d > 1000 ? '#f4f466' :
+                                d > 500 ? '#a6d96a' :
+                                '#1a9641';
     } 
     else {
         return d > 4000 ? '#1a9641':
